@@ -22,7 +22,7 @@ try:
     from stockprob.core.models import RiskTolerance
 except ImportError as e:
     st.error(
-        "StockProb dependencies are missing. Install from requirements.txt at the repository root."
+        "StockProb dependencies are missing. Install from repository root: pip install -r requirements.txt"
     )
     st.code(str(e))
     st.stop()
