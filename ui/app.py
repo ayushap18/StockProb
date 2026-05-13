@@ -8,13 +8,12 @@ import streamlit as st
 from datetime import date, timedelta
 from typing import Optional
 import json
-import sys
-from pathlib import Path
+try:
+    from path_setup import ensure_project_root_on_path
+except ModuleNotFoundError:
+    from ui.path_setup import ensure_project_root_on_path
 
-# Ensure repository root is importable when running from ui/ entrypoint
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
+ensure_project_root_on_path()
 
 # Import the orchestrator
 try:
