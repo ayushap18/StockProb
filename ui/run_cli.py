@@ -76,7 +76,7 @@ Examples:
         from stockprob.services.orchestrator import run_analysis
         from stockprob.core.models import RiskTolerance
     except ImportError as e:
-        print(f"❌ Error: StockProb dependencies are missing.")
+        print(f"❌ Error: Failed to import StockProb package or its dependencies.")
         print(f"   Install from repository root: pip install -r requirements.txt")
         print(f"   Details: {e}")
         return 1
