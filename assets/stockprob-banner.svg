@@ -1,0 +1,35 @@
+<svg width="1400" height="360" viewBox="0 0 1400 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="StockProb banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#22c55e" />
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="360" rx="24" fill="url(#bg)" />
+  <rect x="32" y="32" width="1336" height="296" rx="18" fill="#0b1222" stroke="#334155" />
+
+  <text x="90" y="145" fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700">
+    StockProb
+  </text>
+  <text x="90" y="195" fill="#94a3b8" font-family="Arial, Helvetica, sans-serif" font-size="28">
+    Multi-Agent Stock Probability Engine
+  </text>
+  <text x="90" y="248" fill="#22d3ee" font-family="Arial, Helvetica, sans-serif" font-size="22">
+    6 Specialized Agents • Monte Carlo Simulation • Confidence Scoring
+  </text>
+
+  <polyline
+    points="780,235 860,215 930,225 1000,180 1080,198 1140,150 1220,176 1300,120"
+    fill="none"
+    stroke="url(#line)"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="1300" cy="120" r="9" fill="#22c55e" />
+</svg>
