@@ -3,6 +3,7 @@ import sys
 
 
 def ensure_project_root_on_path() -> None:
+    """Add repository root (parent of ui/) to sys.path for stockprob imports."""
     project_root = Path(__file__).resolve().parents[1]
     root_str = str(project_root)
     if root_str not in sys.path:
