@@ -8,13 +8,23 @@ import streamlit as st
 from datetime import date, timedelta
 from typing import Optional
 import json
+import sys
+from pathlib import Path
+
+# Ensure repository root is importable when running from ui/ entrypoint
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 # Import the orchestrator
 try:
     from stockprob.services.orchestrator import run_analysis
     from stockprob.core.models import RiskTolerance
-except ImportError:
-    st.error("StockProb package not found. Please ensure it's installed.")
+except ImportError as e:
+    st.error(
+        "StockProb dependencies are missing. Install from requirements.txt at the repository root."
+    )
+    st.code(str(e))
     st.stop()
 
 # Page configuration

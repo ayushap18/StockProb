@@ -8,6 +8,13 @@ import argparse
 import json
 from datetime import date, timedelta
 from typing import Optional
+import sys
+from pathlib import Path
+
+# Ensure repository root is importable when running from ui/ entrypoint
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 def main():
     parser = argparse.ArgumentParser(
@@ -69,8 +76,8 @@ Examples:
         from stockprob.services.orchestrator import run_analysis
         from stockprob.core.models import RiskTolerance
     except ImportError as e:
-        print(f"❌ Error: StockProb package not found.")
-        print(f"   Make sure you're running this from /workspace directory")
+        print(f"❌ Error: StockProb dependencies are missing.")
+        print(f"   Install from repository root: pip install -r requirements.txt")
         print(f"   Details: {e}")
         return 1
     
