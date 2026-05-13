@@ -1,0 +1,72 @@
+<svg width="1400" height="430" viewBox="0 0 1400 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="StockProb agent flow">
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, Helvetica, sans-serif; fill: #e2e8f0; }
+      .label { font: 700 18px Arial, Helvetica, sans-serif; fill: #e2e8f0; }
+      .small { font: 500 14px Arial, Helvetica, sans-serif; fill: #94a3b8; }
+    </style>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="430" rx="24" fill="url(#bg2)" />
+  <text class="title" x="50" y="60">StockProb Agent Pipeline</text>
+
+  <rect x="50" y="110" width="190" height="110" rx="16" fill="#1e293b" stroke="#334155" />
+  <text class="label" x="73" y="155">Input</text>
+  <text class="small" x="73" y="182">Ticker, date, window,</text>
+  <text class="small" x="73" y="202">risk tolerance</text>
+
+  <g transform="translate(280,95)">
+    <rect x="0" y="0" width="170" height="70" rx="14" fill="#0f766e" />
+    <text class="label" x="18" y="42">1) Price</text>
+    <text class="label" x="72" y="42">Historian</text>
+  </g>
+  <g transform="translate(470,95)">
+    <rect x="0" y="0" width="170" height="70" rx="14" fill="#0369a1" />
+    <text class="label" x="14" y="42">2) Volatility</text>
+    <text class="label" x="98" y="42">Engine</text>
+  </g>
+  <g transform="translate(660,95)">
+    <rect x="0" y="0" width="170" height="70" rx="14" fill="#4338ca" />
+    <text class="label" x="22" y="42">3) Earnings</text>
+    <text class="label" x="112" y="42">Analyst</text>
+  </g>
+  <g transform="translate(850,95)">
+    <rect x="0" y="0" width="170" height="70" rx="14" fill="#7c3aed" />
+    <text class="label" x="22" y="42">4) Sentiment</text>
+    <text class="label" x="118" y="42">Scanner</text>
+  </g>
+  <g transform="translate(1040,95)">
+    <rect x="0" y="0" width="150" height="70" rx="14" fill="#be185d" />
+    <text class="label" x="21" y="42">5) Macro</text>
+    <text class="label" x="89" y="42">Puller</text>
+  </g>
+  <g transform="translate(1210,95)">
+    <rect x="0" y="0" width="150" height="70" rx="14" fill="#b45309" />
+    <text class="label" x="12" y="42">6) Monte</text>
+    <text class="label" x="79" y="42">Carlo</text>
+  </g>
+
+  <rect x="470" y="260" width="460" height="120" rx="18" fill="#111827" stroke="#334155" />
+  <text class="label" x="515" y="305">Orchestrator Aggregation</text>
+  <text class="small" x="515" y="334">Probability(up) + Confidence Score + Risk Flags + Dashboard</text>
+
+  <g stroke="#64748b" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M240 165 H265" />
+    <path d="M450 130 H470" />
+    <path d="M640 130 H660" />
+    <path d="M830 130 H850" />
+    <path d="M1020 130 H1040" />
+    <path d="M1190 130 H1210" />
+
+    <path d="M365 165 V250 H520" />
+    <path d="M555 165 V230 H560" />
+    <path d="M745 165 V215 H600" />
+    <path d="M935 165 V215 H690" />
+    <path d="M1115 165 V230 H770" />
+    <path d="M1285 165 V250 H840" />
+  </g>
+</svg>

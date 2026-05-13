@@ -4,6 +4,20 @@ StockProb is a Python library that estimates the probability of a stock moving u
 
 > **Disclaimer:** This is math, not financial advice. Past distributions do not guarantee future outcomes.
 
+<p align="center">
+  <img src="assets/stockprob-banner.svg" alt="StockProb banner" width="900" />
+</p>
+
+## Visuals
+
+<p align="center">
+  <img src="assets/agent-flow.svg" alt="StockProb agent flow diagram" width="900" />
+</p>
+
+<p align="center">
+  <img src="assets/market-pulse.svg" alt="Animated market pulse graphic" width="900" />
+</p>
+
 ---
 
 ## How It Works
