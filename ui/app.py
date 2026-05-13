@@ -8,13 +8,22 @@ import streamlit as st
 from datetime import date, timedelta
 from typing import Optional
 import json
+try:
+    from path_setup import ensure_project_root_on_path
+except ModuleNotFoundError:
+    from ui.path_setup import ensure_project_root_on_path
+
+ensure_project_root_on_path()
 
 # Import the orchestrator
 try:
     from stockprob.services.orchestrator import run_analysis
     from stockprob.core.models import RiskTolerance
-except ImportError:
-    st.error("StockProb package not found. Please ensure it's installed.")
+except ImportError as e:
+    st.error(
+        f"StockProb import failed ({e}). Install dependencies from repository root."
+    )
+    st.code("pip install -r requirements.txt")
     st.stop()
 
 # Page configuration

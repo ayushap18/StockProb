@@ -8,6 +8,12 @@ import argparse
 import json
 from datetime import date, timedelta
 from typing import Optional
+try:
+    from path_setup import ensure_project_root_on_path
+except ModuleNotFoundError:
+    from ui.path_setup import ensure_project_root_on_path
+
+ensure_project_root_on_path()
 
 def main():
     parser = argparse.ArgumentParser(
@@ -69,8 +75,8 @@ Examples:
         from stockprob.services.orchestrator import run_analysis
         from stockprob.core.models import RiskTolerance
     except ImportError as e:
-        print(f"❌ Error: StockProb package not found.")
-        print(f"   Make sure you're running this from /workspace directory")
+        print(f"❌ Error: Failed to import StockProb package or its dependencies.")
+        print(f"   Install from repository root: pip install -r requirements.txt")
         print(f"   Details: {e}")
         return 1
     
