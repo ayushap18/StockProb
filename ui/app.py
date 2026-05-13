@@ -20,10 +20,8 @@ try:
     from stockprob.services.orchestrator import run_analysis
     from stockprob.core.models import RiskTolerance
 except ImportError as e:
-    st.error(
-        "StockProb import failed. Install dependencies from repository root:\n"
-        "pip install -r requirements.txt"
-    )
+    st.error("StockProb import failed. Install dependencies from repository root.")
+    st.code("pip install -r requirements.txt")
     st.code(str(e))
     st.stop()
 
